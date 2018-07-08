@@ -1,0 +1,13 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h1>Meine kleine Leihbücherei</h1>
+
+<p>Aktuell in der kleinen Leihbücherei enthalten:</p>
+  <ul>
+    <li><strong>Bücher:</strong> {{ num_books }}</li>
+    <li><strong>Kopien:</strong> {{ num_instances }}</li>
+    <li><strong>Verfügbare Kopien:</strong> {{ num_copies_available }}</li>
+    <li><strong>Autoren:</strong> {{ num_authors }}</li>
+  </ul>
+ {% endblock %}

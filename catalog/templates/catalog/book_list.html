@@ -1,0 +1,21 @@
+
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1>Bücherliste</h1>
+
+    {% if Buchliste %}
+    <ul>
+
+      {% for book in Buchliste %}
+      <li>
+        <a href="{{ book.get_absolute_url }}">{{ book.title }} ({{ book.yearPublished }})</a> ({{book.author}})
+        <!-- <a href="{% url 'book-detail' book.pk %}">({{ book.author }})</a>  --> 
+      </li>
+      {% endfor %}
+
+    </ul>
+    {% else %}
+      <p>Die Bibliothek enthält keine Bücher:(.</p>
+    {% endif %}       
+{% endblock %}
